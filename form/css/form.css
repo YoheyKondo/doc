@@ -1,0 +1,100 @@
+/* FORM SYTLE SHEET */
+/* FONT CSS 読込 */
+@import url("./font.css");
+
+/* FOR ALL */
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family:"NotoSansSC", "メイリオ", Meiryo, Osaka, sans-serif;
+	color: #777777;
+}
+
+/* SET FORM STYLE */
+.form{
+	width: 800px;
+	margin: 0 auto;
+}
+form div{
+	text-align: left;
+}
+form .req{
+	color: #aaaaaa;
+	font-size: 12px;
+}
+input[type="text"], input[type="tel"], input[type="mail"],textarea{
+	display: block;
+	border: solid 1px #999999;
+	border-radius: 8px;
+	padding: 5px;
+	margin: 0 auto;
+	font-size: 16px;
+	width: 95%;
+}
+input[type="text"]:focus, input[type="tel"]:focus, input[type="mail"]:focus,textarea:focus{
+	border: solid 1px #f44336;
+	border-radius: 8px;
+	outline: none; /* Chrome の枠線を除去*/
+	width: 95%;
+}
+textarea{
+	width: 95%;
+	min-width: 95%;
+	min-height: 200px;
+	max-width: 700px;
+	max-height: 800px;
+}
+.submit_btn{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+input[type="submit"] {
+	display: none;
+}
+input[type="submit"] + label {
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+    color: #ffffff;
+    width: 300px;
+    margin: 5px auto;
+	height: 45px;
+    background-color: #ff8634;
+    border: 2px solid #ffd92a;
+    border-radius: 10px;
+    outline: none;
+}
+input[type="submit"]:disabled + label {
+	display: block;
+	cursor: pointer;
+    color: #777;
+    background-color: #9b9b9b8a;
+    border: 2px solid #777;
+    border-radius: 10px;
+}
+/* ERROR時 設定*/
+input[type="text"].error, input[type="tel"].error, input[type="mail"].error,textarea.error{
+	border: solid 2px #f44336;
+	border-radius: 8px;
+	outline: none; /* Chrome の枠線を除去*/
+}
+form .err_msg{
+	color: rgb(240,10,10);
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* FOR Smart Phone Sizes (Under width 800px) */
+@media only screen and (max-width: 799px) {
+	.form{
+		width: 100%;
+	}
+	form{
+		width: 100%;
+	}
+}
