@@ -82,11 +82,11 @@ input[type="submit"] + label {
 }
 input[type="submit"]:disabled + label {
 	display: block;
-	cursor: pointer;
     color: #777;
     background-color: #9b9b9b8a;
     border: 2px solid #777;
     border-radius: 10px;
+    cursor:not-allowed;
 }
 input[type="submit"]#back + label{
 	background-color: #9a9a9a;
