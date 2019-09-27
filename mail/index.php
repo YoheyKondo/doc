@@ -173,15 +173,15 @@ commmonHead();
 		<p class="alert"><?php echo $comm -> h($errmsg); ?></p>
 		<form action="<?php echo $url ?>" method="post" autocomplete="off">
 			<div class="name_div">氏名<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['name']; ?></span></div>
-			<div><input type="text" name="name" id="name" placeholder="(必須)" maxlength="30" value="<?php if(isset($post['name'])) echo $comm -> h($post['name']); ?>" required></div>
+			<div><input type="text" name="name" id="name" placeholder="(必須) 株式会社ＫＡｇｅｎｔ" maxlength="30" value="<?php if(isset($post['name'])) echo $comm -> h($post['name']); ?>" required></div>
 			<div class="mail_div">メールアドレス<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['mail']; ?></span></div>
-			<div><input type="mail" name="mail" id="mail" placeholder="(必須)" maxlength="255" value="<?php if(isset($post['mail'])) echo $comm -> h($post['mail']); ?>" required></div>
+			<div><input type="mail" name="mail" id="mail" placeholder="(必須) sample@mail.com" maxlength="255" value="<?php if(isset($post['mail'])) echo $comm -> h($post['mail']); ?>" required></div>
 			<div class="tel_div">電話<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['tel']; ?></span></div>
-			<div><input type="tel" name="tel" id="tel" placeholder="(必須)" maxlength="12" value="<?php if(isset($post['tel'])) echo $comm -> h($post['tel']); ?>" required></div>
+			<div><input type="tel" name="tel" id="tel" placeholder="(必須) 01234567890" maxlength="12" value="<?php if(isset($post['tel'])) echo $comm -> h($post['tel']); ?>" required></div>
 			<div class="subject_div">件名<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['subject']; ?></span></div>
-			<div><input type="text" name="subject" id="subject" placeholder="(必須)" maxlength="100" value="<?php if(isset($post['subject'])) echo $comm -> h($post['subject']); ?>" required></div>
+			<div><input type="text" name="subject" id="subject" placeholder="(必須) 見積依頼" maxlength="100" value="<?php if(isset($post['subject'])) echo $comm -> h($post['subject']); ?>" required></div>
 			<div class="contents_div">お問い合わせ内容<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['contents']; ?></span></div>
-			<textarea maxlength="255" name="contents" id="contents" placeholder="お問い合わせ内容"><?php if(isset($post['contents'])) echo $comm -> h($post['contents']); ?></textarea>
+			<textarea maxlength="255" name="contents" id="contents" placeholder="(必須) お問い合わせ内容"><?php if(isset($post['contents'])) echo $comm -> h($post['contents']); ?></textarea>
 			<div class="submit_btn">
 				<input type="submit" name="submit" value="submit" id="submit" disabled><label for="submit">確認画面へ</label>
 			</div>
