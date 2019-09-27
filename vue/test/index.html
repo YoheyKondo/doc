@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js TEST</title>
+</head>
+
+<body>
+    <div id="animal">
+        <h1>Hello Vue.js</h1>
+        
+        <p v-if="inSwitch=='dog'">{{banks.dog.name}}</p>
+        <p v-else-if="inSwitch=='cat'"> {{banks.cat.name}}</p>
+        <p v-else> {{banks.ham.name}}</p>
+
+        <img v-bind:src="image" style="width: 300px;height: 300px;">
+        <p v-if="pet">This is famous pet</p>
+        <p v-else>This is not famous pet</p>
+
+        <p v-if="inventry>=10">That's Famous Animal </p>
+        <p v-else-if="inventry<10 && inventry>0">A Little Famous Animal</p>
+        <p v-else>Not Famous</p>
+
+        <p v-show="pet">{{explain}}</p>
+        <button v-on:click="counter('plus')"> ADD BTN </button>
+        <button v-on:click="counter('non')" :disabled="parameter"> REM BTN </button>
+        <p>COUNT : {{count}}  匹</p>
+        <ul>
+            <li v-for="info in infos">{{info}}</li>
+        </ul>
+
+        <button v-on:click="chaAni">CHANGE ANIMAL</button>
+        <button v-on:click="removeAnimalCount">REMOVE STORAGE ANIMAL</button>
+        <h1>{{inSwitch}}</h1>
+        <h2>{{changeCount}}</h2>
+        <p v-if="inSwitch=='dog'">{{banks.dog.name}} : {{banks.dog.live}} </p>
+        <p v-else-if="inSwitch=='cat'"> {{banks.cat.name}} : {{banks.cat.live}} </p>
+        <p v-else> {{banks.ham.name}} : {{banks.ham.live}} </p>
+    </div>
+
+
+    <!--
+    <div id="app">
+        <vc-main></vc-main>
+    </div>
+
+    <div id="example">
+        <button v-on:click="counter += 1">Add 1</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
+    </div>
+    -->
+
+<!--　vue.js 導入部 -->
+    <!-- promise (IEに必要) -->
+    <script src="https://unpkg.com/es6-promise"></script>
+    <!-- vue -->
+    <script src="https://unpkg.com/vue"></script>
+    <!-- http-vue-loader -->
+    <script src="https://unpkg.com/http-vue-loader"></script>
+<!--　vue.js 導入部 -->
+
+    <script type="text/javascript">
+        /*
+        var vue = new Vue({
+            el: '#app',
+            components: {
+                'vc-main': httpVueLoader('vc-main.vue') //他階層にあるなら、('js/components/vc-main.vue')の様な指定も可能
+            }
+        });
+        var example1 = new Vue({
+        el: '#example',
+        data: {
+                counter: 0
+            }
+        })
+        */
+    </script>
+    <script type="text/javascript" src="./vuetest.js"></script>
+</body>
+</html>
