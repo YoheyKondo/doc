@@ -181,7 +181,7 @@ commmonHead();
 			<div class="subject_div">件名<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['subject']; ?></span></div>
 			<div><input type="text" name="subject" id="subject" placeholder="(必須) 見積依頼" maxlength="100" value="<?php if(isset($post['subject'])) echo $comm -> h($post['subject']); ?>" required></div>
 			<div class="contents_div">お問い合わせ内容<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['contents']; ?></span></div>
-			<textarea maxlength="255" name="contents" id="contents" placeholder="(必須) お問い合わせ内容"><?php if(isset($post['contents'])) echo $comm -> h($post['contents']); ?></textarea>
+			<textarea maxlength="255" name="contents" id="contents" placeholder="(必須) お問い合わせ内容&#13;&#10;問い合わせ"><?php if(isset($post['contents'])) echo $comm -> h($post['contents']); ?></textarea>
 			<div class="submit_btn">
 				<input type="submit" name="submit" value="submit" id="submit" disabled><label for="submit">確認画面へ</label>
 			</div>
