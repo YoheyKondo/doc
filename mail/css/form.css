@@ -21,7 +21,9 @@ a{
 	background-color: #999999;
 	color: #ffffff;
 }
-
+::placeholder{
+	color:#aaaaaa;
+}
 /* SET FORM STYLE */
 .form{
 	width: 800px;
@@ -42,6 +44,7 @@ input[type="text"], input[type="tel"], input[type="mail"],textarea{
 	margin: 0 auto;
 	font-size: 16px;
 	width: 95%;
+	color: #333333;
 }
 input[type="text"]:focus, input[type="tel"]:focus, input[type="mail"]:focus,textarea:focus{
 	border: solid 1px #f44336;
