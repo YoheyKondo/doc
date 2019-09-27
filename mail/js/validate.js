@@ -152,6 +152,12 @@ var validate = {
 	        	$('.mail_div span.err_msg').text(validate.errorMessage['mail']);
 	        	return false;
 	        }
+	        // 不正記号チェック（-「ハイフン」 .「ドット」  _「アンダーバー」のみ許可）
+	        if( mail.match( /[^\!\"\#\$\%\&\'\(\)\=\~\|\^\\\@\[\;\:\]\,\/\\\<\>\?\`\{\+\*\} ]/ ) ) {
+	        	validate.errorMessage['mail'] = 'メールアドレスには半角英数字、記号は_（アンダーバー）.（ドット）-（ハイフン）のみです。';
+	        	$('.mail_div span.err_msg').text(validate.errorMessage['mail']);
+	        	return false;
+	        }
 	        $('.mail_div span.err_msg').text(validate.errorMessage['mail']);
 	        return true;
 	    } else {
