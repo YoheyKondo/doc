@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue.js lesson</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 20px;
+			font-weight: normal;
+		}
+		html, body{
+			overflow: hidden;
+		}
+		button{
+			width: 300px;
+			height: 40px;
+			font-size: 20px;
+		}
+		h1{
+			font-size: 25px;
+
+		}
+		.cell{
+			display: table;
+			width:100%;
+		}
+		.cell > div{
+			display: table-cell;
+			width: 50%;
+			border: solid 1px #777777;
+		}
+		.tasks{
+			width: 300px;
+			height: 40px;
+			font-size: 10px;
+		}
+		.delete{
+			width: 50px;
+			height: 40px;
+			font-size: 20px;
+			text-align: center;
+		}
+		.todolist {
+			overflow-y: scroll;
+			width: 80%;
+			height: 480px;
+			margin: 0 auto;
+		}
+		.add-form{
+			position: fixed;
+			bottom: 20px;
+			right: 0;
+			left: 0;
+		}
+		input{
+			text-align: left;
+		}
+	</style>
+
+</head>
+<body>
+<!-- html -->
+<div id="app">
+	<h1>タスク管理ツール(vue.js)</h1>
+	<br><hr><br>
+	<h2>新しい作業の追加</h2>
+	<form class="add-form" v-on:submit.prevent="addTask">
+		<label>
+			<input type="date" name="date" ref="date" placeholder="期日">
+		</label>
+		<input type="text" ref="comment" placeholder="タスクの追加">
+		<!-- 追加ボタンのモック -->
+		<button type="submit">追加</button>
+	</form>
+	
+	<button v-on:click="removeTask">完全削除</button>
+	<button v-on:click="dateSort">ソート</button>
+	<div class="todolist">
+		<h1 v-if="todos.value > 0">タスク一覧</h1>
+		<div class="cell">
+			<div class="task">
+				<h1>未完了</h1>
+				<div  v-for="todo in todos" v-if="todo.state==0" >
+					<p><button class="tasks" v-on:click="changeChecked(todo.id)" v-bind:id="todo.id"><span>{{ todo.date }}</span> : <span>{{ todo.comment}}</span></button></p>
+				</div>
+			</div>
+			<div class="comp">
+				<h1>完了</h1>
+				<div  v-for="todo in todos"  v-if="todo.state==1" >
+					<p><button v-on:click="removeList(todo.id)" class="delete" ref="delete" v-bind:value="todo.id">削除</button><button class="tasks" v-on:click="changeChecked(todo.id)" v-bind:id="todo.id"><span>{{ todo.date }}</span> : <span>{{ todo.comment}}</span></button></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<!--　vue.js 導入部 -->
+<!-- promise (IEに必要) -->
+<script src="https://unpkg.com/es6-promise"></script>
+<!-- vue -->
+<script src="https://unpkg.com/vue"></script>
+<!-- http-vue-loader -->
+<script src="https://unpkg.com/http-vue-loader"></script>
+<!--　vue.js 導入部 -->
+
+
+
+<!-- vue 直書き -->
+<script type="text/javascript" src="vue.js"></script>
+</body>
+</html>

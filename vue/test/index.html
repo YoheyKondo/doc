@@ -14,7 +14,9 @@
         <p v-else-if="inSwitch=='cat'"> {{banks.cat.name}}</p>
         <p v-else> {{banks.ham.name}}</p>
 
-        <img v-bind:src="image" style="width: 300px;height: 300px;">
+        <p>{{image}}</p>
+        
+        <img :src="image" style="width: 300px;height: 300px;">
         <p v-if="pet">This is famous pet</p>
         <p v-else>This is not famous pet</p>
 
@@ -40,7 +42,6 @@
     </div>
 
 
-    <!--
     <div id="app">
         <vc-main></vc-main>
     </div>
@@ -49,7 +50,6 @@
         <button v-on:click="counter += 1">Add 1</button>
         <p>The button above has been clicked {{ counter }} times.</p>
     </div>
-    -->
 
 <!--　vue.js 導入部 -->
     <!-- promise (IEに必要) -->
@@ -59,9 +59,8 @@
     <!-- http-vue-loader -->
     <script src="https://unpkg.com/http-vue-loader"></script>
 <!--　vue.js 導入部 -->
-
+<!--
     <script type="text/javascript">
-        /*
         var vue = new Vue({
             el: '#app',
             components: {
@@ -74,8 +73,8 @@
                 counter: 0
             }
         })
-        */
     </script>
+-->
     <script type="text/javascript" src="./vuetest.js"></script>
 </body>
 </html>

@@ -38,7 +38,6 @@ var app = new Vue({
 			var para = this.count;
 			para = (param=='plus') ? para + 1 : para - 1;
 			if(para<=0) {
-				console.log(para);
 				if(para==0 && param=='non'){
 					this.parameter = this.disabledParam.true;
 					this.count = para;			
@@ -53,7 +52,6 @@ var app = new Vue({
 		},
 		chaAni(){
 			this.changeCount += 1;
-			console.log(this.changeCount);
 			if(this.changeCount%3==0){
 				this.inSwitch = 'dog';
 
@@ -63,7 +61,8 @@ var app = new Vue({
 				this.inSwitch = 'ham';
 			}
 			this.image = this.banks[this.inSwitch].image;
-			this.saveAnimalCount()
+			this.saveAnimalCount();
+			this.saveAni();
 		},
 		saveAnimalCount() {
 			//this.changeCount の値を保存
@@ -75,15 +74,48 @@ var app = new Vue({
 			const parsed = JSON.stringify(this.changeCount);
 			localStorage.removeItem('changeCount');
 			this.changeCount = 0;
+		},
+		saveAni(){
+			const parsed = JSON.stringify(this.inSwitch);
+			localStorage.setItem('inSwitch', parsed);
+			console.log(parsed);
+			localStorage.setItem('image', this.banks[this.inSwitch].image);
+		},
+		removeAni() {
+			//this.changeCount の値を除去
+			const parsed = JSON.stringify(this.changeCount);
+			localStorage.removeItem('inSwitch');
+			localStorage.removeItem('image');
+			this.inSwitch = 'dog';
+			this.image = this.banks[this.inSwitch].image;
 		}
 	},
 	mounted() {
 		//json がぶっ壊れている可能性があるので、その場合は local storage を削除
+		if(localStorage.getItem('image')) {
+			try {
+				this.image = JSON.parse(localStorage.getItem('image'));
+			} catch(e) {
+				//完了後の処理
+			}
+		}
+		if(localStorage.getItem('inSwitch')) {
+			try {
+				this.inSwitch = JSON.parse(localStorage.getItem('inSwitch'));
+			} catch(e) {
+				//完了後の処理
+			}
+		}
 		if (localStorage.getItem('changeCount')) {
 			try {
 				this.changeCount = JSON.parse(localStorage.getItem('changeCount'));
+
 			} catch(e) {
+				/*
 				localStorage.removeItem('changeCount');
+				localStorage.removeItem('inSwitch');
+				localStorage.removeItem('image');
+				*/
 			}
 		}
 	}
