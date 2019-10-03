@@ -16,9 +16,18 @@ window.onload=function(){
   });
 }
 
+if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+		// iOS 13+
+		popupOpen("requestPermissionPopup");
+	} else {
+		// non iOS 13+
+		window.addEventListener("deviceorientation", 今までのイベント);
+	}
+    
 $(function(){
 	//ジャイロセンサー
 	// for ios13
+
 	requestPermission = ()=> {
 		DeviceOrientationEvent.requestPermission().then(response => {
 			if (response === 'granted') {
