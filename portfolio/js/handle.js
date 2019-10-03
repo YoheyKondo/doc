@@ -1,16 +1,6 @@
 
 //ジャイロセンサー
-window.addEventListener("deviceorientation", handleOrientation, true);
- 
-function handleOrientation(event) {
-  var absolute = event.absolute;
-  var alpha    = event.alpha;
-  var beta     = event.beta;
-  var gamma    = event.gamma;
 
-  console.log(absolute + ' : ' + alpha + ' : ' + beta + ' : ' + gamma + ' ; ');
-  $('#jam').text(absolute + ' : ' + alpha + ' : ' + beta + ' : ' + gamma + ' ; ');
-}
 
 //マウスカーソル
 window.onload=function(){
@@ -36,4 +26,17 @@ $(function(){
 		console.log('center X : ' + width / 2);
 		console.log('center Y : ' + height / 2);
 	});
+	window.addEventListener('deviceorientation', function(e) {
+    var str   = '',
+        alpha = e.alpha,
+        beta  = e.beta,
+        gamma = e.gamma;
+	 
+	    str  = 'alpha = ' + alpha + '\n';
+	    str += 'beta = '  + beta + '\n';
+	    str += 'gamma = ' + gamma + '\n';
+	 
+	    alert(str);
+	}, false);
+	
 })
