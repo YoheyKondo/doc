@@ -1,5 +1,4 @@
 
-//ジャイロセンサー
 
 
 //マウスカーソル
@@ -18,6 +17,17 @@ window.onload=function(){
 }
 
 $(function(){
+	//ジャイロセンサー
+	window.addEventListener("devicemotion", function(e) {
+		var x = e.accelerationIncludingGravity.x;
+		    x_var = document.getElementById("x");
+		if ( x > 5 ) {
+		    navigator.notification.vibrate(1000);
+		}
+		x_var.innerHTML = x;
+		alert(x);
+	}, true);
+
 
 	$(window).resize(function(){
 		var width = $(window).width();
@@ -38,5 +48,5 @@ $(function(){
 	 
 	    alert(str);
 	}, false);
-	
+
 })
