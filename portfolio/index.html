@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yohey Kondo</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="container" class="container">
+		<div class="scene">
+			<div data-depth="5.00" class="b1"><div class="box"></div></div>
+			<div data-depth="4.00" class="b2"><div class="box"></div></div>
+			<div data-depth="3.00" class="b3"><div class="box"></div></div>
+			<div data-depth="2.00" class="b4"><div class="box"></div></div>
+			<div data-depth="1.00" class="b5"><div class="box"></div></div>
+			<div data-depth="0.50" class="b6"><div class="box"></div></div>
+		</div>
+	</div>
+	<div class="title">
+		<h1>Portfolio</h1>
+	</div>
+	<header>
+		
+		<nav>
+			<ul>
+				<li><a href="#home">HOME</a></li>
+				<li><a href="#skill">SKILL</a></li>
+				<li><a href="#works">WORKS</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</nav>
+		<div class="mainImg">
+			<img src="">
+		</div>
+	</header>
+	<main>
+		<div class="wrapper">
+			<!-- SKILLS -->
+			<div id="skill" class="skills_box">
+				<!-- DESIGN -->
+				<div id="design" class="skill_box">
+					<div class="icon">
+						<h2>CREATE</h2>
+						<i></i>
+					</div>
+					<div class="content">
+						<div>
+							<h3>DESIGN TOOLS</h3>
+							<p class="images">
+								<img src="">
+								<img src="">
+								<img src="">
+							</p>
+							<p>Adobe Illustrator/Photoshop/AfterEffects/Dreamweaver/Flash</p>
+							<h3>COMPOSE　TOOLS</h3>
+							<p class="images">
+								<img src="">
+							</p>
+							<p>LogicX/Protools</p>	
+						</div>
+					</div>
+				</div>
+				<!-- PROGRAM -->
+				<div id="program" class="skill_box">
+					<div class="icon">
+						<h2>PROGRAM SKILLS</h2>
+						<i></i>
+					</div>
+					<div class="content">
+						<h3></h3>
+					</div>
+				</div>
+				<div id="design" class="skill_box">
+					<div class="icon">
+						<i></i>
+					</div>
+					<div class="content"></div>
+				</div>
+			</div>
+			<!-- WORKS -->
+			<div id="works" class="works_box"></div>
+			<!-- CONTACT -->
+			<div id="contact" class="contact_box"></div>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/parallax.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		// Pretty simple huh?
+	$(function(){
+		//乱数
+		//関数
+		function rdmNum(){
+			//最大値・最小値
+			const max = 700;
+			const min = 100;
+			const randRange = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+			return randRange;
+		}
+
+		setTimeout(function(){
+			var lastscene = parseInt($('.scene').length);
+			for (var i = 0; i < lastscene; i++) {
+			var scene = $('.scene').eq(i).get(0);
+			console.log(scene);
+			var parallax = new Parallax(scene);
+			}},0000);
+		});
+	</script>
+
+</body>
+</html>
