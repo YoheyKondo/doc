@@ -10,6 +10,7 @@ if(isset($_COOKIE)) $_COOKIE = sanitize($_COOKIE);						//NULLバイト除去//
 if(isset($_POST)) $_POST = sanitize($_POST);							//NULLバイト除去//
 if(isset($_GET)) $_GET = sanitize($_GET);								//NULLバイト除去//
 if($encode == 'SJIS') $_POST = $comm -> sjisReplace($_POST,$encode);	//Shift-JISの場合に誤変換文字の置換実行
+
 //確認、再入力、完了時（半角指定のものを半角に変換処理
 if(isset($_POST)){
 	foreach ($_POST as $key => $value) {
@@ -42,6 +43,9 @@ $err_mail = $to_mail;														//エラーログ・不正パラメータ送�
 $cc_mail = 'y_kondo@office-kagent.com';										//CC送信先メールアドレス
 $bcc_mail = 'y_kondo@office-kagent.com';									//BCC送信先メールアドレス
 $subject = "ホームページからのお問い合わせ";										//件名（管理者受信メール）
+//リファラチェック用
+$referUrl = 'excitingworks.jp';
+$referCheck = 1;
 //----------------------------------------------------------------------------------------------------------------------------------------------
 /*
 //		↑↑↑↑↑↑↑↑↑↑↑
@@ -50,6 +54,10 @@ $subject = "ホームページからのお問い合わせ";										//件名（
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //画面遷移経路図（入力・再入力画面：initHtml、確認画面：verifyHtml、完了画面：finishHtml、（入力画面が別ページである場合、入力内容エラー画面：errorHtml()にinitHtml()を変更）
 if(isset($post['submit'])){
+	if($referCheck==1){
+		if(!$comm ->referChk($referUrl)) { initHtml($comm,$post); exit; };
+	}
+
 	if(isset($post['back'])) { initHtml($comm,$post); exit; }
 	if(isset($post['send']) && !empty($post['token'] && isset($post['token']))){
 		if(validate($comm)) {
@@ -61,7 +69,7 @@ if(isset($post['submit'])){
 		}
 		exit();  // 処理終了  
 	}else{
-		(validate($comm)) ? verifyHtml($comm) : initHtml($comm,$post);
+		(validate($comm)) ? verifyHtml($comm) : initHtml($comm, $post);
 		exit();
 	}
 }else{

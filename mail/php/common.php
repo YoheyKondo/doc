@@ -14,6 +14,13 @@ class chkCommon{
 	public function sessionChk(){
 		$session = $_SESSION;
 	}
+	//リファラチェック
+	public function referChk($target_url){
+		$refer = $_SERVER["HTTP_REFERER"];
+		$url = parse_url($refer);
+		$host = $url['host'];
+		return ($target_url==$host) ? true : false;
+	}
 	//TOKEN 生成
 	public function genToken(){
 		$str = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPUQRSTUVWXYZ';
