@@ -1,0 +1,205 @@
+/*CSS STYLE SHEET*/
+@charset "UTF-8";
+/*MATERIAL ICON*/
+@import url("./icon/material-icons.css");
+/*FONT SET*/
+@font-face {
+	font-family: 'Alice';
+	font-style: normal;
+	font-display: swap;
+	src: url('./font/Alice/Alice-Regular.ttf'); /* IE9 Compat Modes */
+	src: local('Alice'), /* フォントがローカルにインストールされている場合に有効 */
+	     url('src: url('./font/Alice/Alice-Regular.ttf');')  format('truetype'); /* ttf - Safari, Android, iOS */
+}
+@font-face {
+	font-family: 'Oranienbaum';
+	font-style: normal;
+	font-display: swap;
+	src: local('Oranienbaum'), /* フォントがローカルにインストールされている場合に有効 */
+	     url('src: url('./font/Oranienbaum/Oranienbaum-Regular.ttf');')  format('truetype'); /* ttf - Safari, Android, iOS */
+}
+@font-face {
+	font-family: 'NotoSerifCJKjp';
+	src: local('NotoSerifCJKjp'), /* フォントがローカルにインストールされている場合に有効 */
+	     url('src: url('./font/Oranienbaum/NotoSerifCJKjp-Regular.otf');')  format('truetype'); /* ttf - Safari, Android, iOS */
+	font-style: normal;
+	font-display: swap;
+}	
+@font-face {
+	font-family: 'NotoSansMonoCJKjp';
+	src: local('NotoSansMonoCJKjp'), /* フォントがローカルにインストールされている場合に有効 */
+	     url('src: url('./font/Oranienbaum/NotoSansMonoCJKjp-Regular.otf');')  format('truetype'); /* ttf - Safari, Android, iOS */
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'NotoSansJa';
+	src: local('NotoSansJa'), /* フォントがローカルにインストールされている場合に有効 */
+	     url('src: url('./font/Oranienbaum/NotoSansJa-Regular.otf');')  format('truetype'); /* ttf - Safari, Android, iOS */
+	font-style: normal;
+	font-display: swap;
+}
+
+/* CSS STYLE*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	font-size: 16px;
+	font-family: 'NotoSerifCJKjp', 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	color: #777777;
+	text-align: center;
+}
+ul,li,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #777777;
+}
+h1,h2,h3,h4,h5{
+	font-family: 'Alice', 'Oranienbaum', 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+.wrapper{
+	width: 1024px;
+	margin: 0 auto;
+}
+/* header */
+header > h1 {
+	font-family: 'Oranienbaum', "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+.logo{
+	width: 500px;
+	height: 300px;
+	border: 1px solid #888888;
+}
+.topImage{
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+/* MENU */
+nav{
+	width: 100%;
+}
+nav ul{
+	width: 1024px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+nav ul li{
+	vertical-align: middle;
+	padding-bottom: 10px;
+	height: 40px;
+}
+nav ul li a{
+	width: 120px;
+	display: block;
+}
+nav ul li a:hover{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #cccccc;
+}
+/* SECTION */
+main{
+	width: 100%;
+}
+main .wrapper{
+	width: 1024px;
+	margin: 0 auto;
+}
+section{
+	padding: 20px 0;
+}
+section h2{
+	font-size: 34px;
+	padding: 10px 0;
+}
+/* NEWS */
+section > div{
+	width: 100%;
+	display: flex;
+	/* 
+	flex-direction: row;
+	flex-wrap: wrap;
+	*/
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+section > div > div{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	margin-top: 20px;
+}
+section > div > div > h3{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	font-size: 30px;
+	color: #555555;
+}
+section > div > div > img{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+section > div > div > p{
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	font-size: 20px;
+}
+/* ABOUT SECTION */
+section > div.about{
+	display: inherit;
+}
+div.aboutus > div {
+	width: 100%;
+	overflow: hidden;
+	text-shadow: 1px 1px 3px #000000;
+}
+div.aboutus > div > img{
+	width: 100%;
+	object-fit: cover;
+}
+div.aboutus > div > h3{
+	color: #ffffff;
+}
+div.aboutus > div > p{
+	color: #ffffff;
+}
+/*FOOTER*/
+footer{
+	width: 100%;
+	background-color: #333333;
+	color: #FFFFFF;
+	padding: 30px 0 0;
+}
+footer > div{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+footer > div > a{
+	color: #ffffff;
+	font-size: 12px;
+}
+footer > div > h2{
+	padding-top: 20px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #ffffff;
+	vertical-align: bottom;
+	padding-bottom: 10px;
+}

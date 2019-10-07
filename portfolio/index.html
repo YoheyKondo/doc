@@ -3,27 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Yohey Kondo</title>
+	<title>Portfolio Yohey Kondo</title>
+	<link rel="stylesheet" type="text/css" href="css/icon/material-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
+	<!-- Background Animation -->
 	<div id="container" class="container">
 		<div class="scene" id="#scene">
-			<div data-depth="5.00" class="b1"><div class="box"></div></div>
-			<div data-depth="4.00" class="b2"><div class="box"></div></div>
-			<div data-depth="3.00" class="b3"><div class="box"></div></div>
-			<div data-depth="2.00" class="b4"><div class="box"></div></div>
-			<div data-depth="1.00" class="b5"><div class="box"></div></div>
-			<div data-depth="0.50" class="b6"><div class="box"></div></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
 		</div>
 	</div>
-
+	<!-- Main Title -->
 	<div class="title">
-		<button onclick="requestPermission()">このエリアを押して モーションの利用を許可してください (iOS 13+) </button>
 		<h1>Portfolio</h1>
 	</div>
+	<!-- Head Menu -->
 	<header>
-		
 		<nav>
 			<ul>
 				<li><a href="#home">HOME</a></li>
@@ -36,32 +40,54 @@
 			<img src="">
 		</div>
 	</header>
+	<!-- Contents -->
 	<main>
 		<div class="wrapper">
 			<!-- SKILLS -->
 			<div id="skill" class="skills_box">
 				<!-- DESIGN -->
 				<div id="design" class="skill_box">
-					<div class="icon">
-						<h2>CREATE</h2>
-						<i></i>
+					<div class="title_tips">
+						<h2><i class="material-icons">edit</i><span>CREATIVE TOOLS<i class="material-icons">edit</i></h2>
 					</div>
 					<div class="content">
 						<div>
-							<h3>DESIGN TOOLS</h3>
+							<h3><i class="material-icons">brush</i><span> DESIGN TOOLS </span><i class="material-icons">brush</i></h3>
 							<p class="images">
-								<img src="">
-								<img src="">
-								<img src="">
+								<img src="./img/logos/ai.png">
+								<img src="./img/logos/ps.png">
+								<img src="./img/logos/ae.png">
+								<img src="./img/logos/pr.png">
+								<img src="./img/logos/dw.png">
+								<img src="./img/logos/fl.png">
 							</p>
-							<p>Adobe Illustrator/Photoshop/AfterEffects/Dreamweaver/Flash</p>
-							<h3>COMPOSE　TOOLS</h3>
+							<p class="text">Adobe Illustrator/Photoshop/AfterEffects/Dreamweaver/Flash</p>
+						</div>
+						<div>
+							<h3><i class="material-icons">music_video</i><span> COMPOSE TOOLS </span><i class="material-icons">music_video</i></h3>
 							<p class="images">
-								<img src="">
+								<img src="./img/logos/logic.png">
+								<img src="./img/logos/protools.png">
 							</p>
-							<p>LogicX/Protools</p>	
+							<p class="text">LogicX/Protools</p>	
 						</div>
 					</div>
+				</div>
+				<!-- CODING -->
+				<div id="coding" class="skill_box">
+					<div class="title_tips">
+						<h2><i></i><span>WEB DESIGN TOOLS <span class="and">&</span> SKILLS</span><i></i></h2>
+						<i></i>
+					</div>
+					<div class="content">
+						<h3><i></i><span></span><i></i></h3>
+					</div>
+				</div>
+				<div id="design" class="skill_box">
+					<div class="icon">
+						<i></i>
+					</div>
+					<div class="content"></div>
 				</div>
 				<!-- PROGRAM -->
 				<div id="program" class="skill_box">
@@ -86,12 +112,12 @@
 			<div id="contact" class="contact_box"></div>
 		</div>
 	</main>
+	<!-- footer -->
 	<footer>
 		<div id="jam"></div>
 	</footer>
+	<!-- JS -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	
 	<script type="text/javascript" src="js/handle.js"></script>
-	
 </body>
 </html>
