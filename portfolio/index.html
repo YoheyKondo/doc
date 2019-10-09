@@ -6,9 +6,12 @@
 	<title>Portfolio Yohey Kondo</title>
 	<link rel="stylesheet" type="text/css" href="css/icon/material-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
 </head>
 <body>
+	<!-- BASE BACKGROUND IMAGE -->
+	<div class="bg">
+		<img src="./img/bg/coding.png">
+	</div>
 	<!-- Background Animation -->
 	<div id="container" class="container">
 		<div class="scene" id="#scene">
@@ -25,6 +28,9 @@
 	<!-- Main Title -->
 	<div class="title">
 		<h1>Portfolio</h1>
+		<div class="scrollDown">
+			<i class="material-icons">expand_more</i>
+		</div>
 	</div>
 	<!-- Head Menu -->
 	<header>
@@ -43,73 +49,97 @@
 	<!-- Contents -->
 	<main>
 		<div class="wrapper">
-			<!-- SKILLS -->
-			<div id="skill" class="skills_box">
-				<!-- DESIGN -->
-				<div id="design" class="skill_box">
-					<div class="title_tips">
-						<h2><i class="material-icons">edit</i><span>CREATIVE TOOLS<i class="material-icons">edit</i></h2>
+			<!-- DESIGN -->
+			<div id="skill" >
+				<div class="title_tips">
+					<h2><i class="material-icons">edit</i><span>CREATIVE TOOLS<i class="material-icons">edit</i></h2>
+				</div>
+				<div class="content">
+					<div>
+						<h3><i class="material-icons">brush</i><span> DESIGN TOOLS </span><i class="material-icons">brush</i></h3>
+						<p class="images">
+							<img src="./img/logos/ai.png">
+							<img src="./img/logos/ps.png">
+							<img src="./img/logos/ae.png">
+							<img src="./img/logos/pr.png">
+							<img src="./img/logos/dw.png">
+							<img src="./img/logos/fl.png">
+						</p>
+						<p class="text">Adobe Illustrator/Photoshop/AfterEffects/Dreamweaver/Flash</p>
 					</div>
-					<div class="content">
-						<div>
-							<h3><i class="material-icons">brush</i><span> DESIGN TOOLS </span><i class="material-icons">brush</i></h3>
-							<p class="images">
-								<img src="./img/logos/ai.png">
-								<img src="./img/logos/ps.png">
-								<img src="./img/logos/ae.png">
-								<img src="./img/logos/pr.png">
-								<img src="./img/logos/dw.png">
-								<img src="./img/logos/fl.png">
-							</p>
-							<p class="text">Adobe Illustrator/Photoshop/AfterEffects/Dreamweaver/Flash</p>
-						</div>
-						<div>
-							<h3><i class="material-icons">music_video</i><span> COMPOSE TOOLS </span><i class="material-icons">music_video</i></h3>
-							<p class="images">
-								<img src="./img/logos/logic.png">
-								<img src="./img/logos/protools.png">
-							</p>
-							<p class="text">LogicX/Protools</p>	
-						</div>
+					<div>
+						<h3><i class="material-icons">music_video</i><span> COMPOSE TOOLS </span><i class="material-icons">music_video</i></h3>
+						<p class="images">
+							<img src="./img/logos/logic.png">
+							<img src="./img/logos/protools.png">
+						</p>
+						<p class="text">LogicX/Protools</p>	
 					</div>
 				</div>
-				<!-- CODING -->
-				<div id="coding" class="skill_box">
-					<div class="title_tips">
-						<h2><i></i><span>WEB DESIGN TOOLS <span class="and">&</span> SKILLS</span><i></i></h2>
-						<i></i>
-					</div>
-					<div class="content">
-						<h3><i></i><span></span><i></i></h3>
-					</div>
+			</div>
+			<!-- CODING -->
+			<div id="coding" >
+				<div class="title_tips">
+					<h2><i class="material-icons">web</i><span>USE TOOLS <span class="and">&</span> SKILLS</span><i class="material-icons">web</i></h2>
 				</div>
-				<div id="design" class="skill_box">
-					<div class="icon">
-						<i></i>
+				<div class="content">
+					<div>
+						<h3><i class="material-icons">computer</i><span>DEV TOOLS</span><i class="material-icons">computer</i></h3>
+						<p class="images">
+							<img src="./img/logos/git.png">
+							<img src="./img/logos/github.png">
+							<img src="./img/logos/wp.png">
+						</p>
+						<p class="text">Git / GitHub / WordPress</p>
+						
 					</div>
-					<div class="content"></div>
-				</div>
-				<!-- PROGRAM -->
-				<div id="program" class="skill_box">
-					<div class="icon">
-						<h2>PROGRAM SKILLS</h2>
-						<i></i>
+					<div>
+						<h3><i class="material-icons">music_video</i><span> SKILLS </span><i class="material-icons">music_video</i></h3>
+						<p class="images">
+							<img src="./img/logos/html.png">
+							<img src="./img/logos/css.png">
+							<img src="./img/logos/js.png">
+							<img src="./img/logos/jquery.png">
+							<img src="./img/logos/vue.png">
+							<img src="./img/logos/php.png">
+							<img src="./img/logos/smarty.png">
+							<img src="./img/logos/laravel.png">
+							<img src="./img/logos/perl.png">
+						</p>
+						<p class="text">HTML / CSS / JavaScript(ECMAscript・JQuery・Vue) / PHP(Smarty・Laravel) / Perl / Fortran</p>	
 					</div>
-					<div class="content">
-						<h3></h3>
-					</div>
-				</div>
-				<div id="design" class="skill_box">
-					<div class="icon">
-						<i></i>
-					</div>
-					<div class="content"></div>
 				</div>
 			</div>
 			<!-- WORKS -->
-			<div id="works" class="works_box"></div>
+			<div id="works" class="works_box">
+				<div class="title_tips">
+					<h2><i class="material-icons">web</i><span>WORKS</span><i class="material-icons">web</i></h2>
+				</div>
+				<div class="content">
+					<div>
+						<h3><i class="material-icons">computer</i><span>DEV TOOLS</span><i class="material-icons">computer</i></h3>
+						<p class="images">
+							<img src="./img/logos/git.png">
+							<img src="./img/logos/github.png">
+							<img src="./img/logos/wp.png">
+						</p>
+						<p class="text">Git / GitHub / WordPress</p>
+						
+					</div>
+					<div>
+						<h3><i class="material-icons">music_video</i><span> SKILLS </span><i class="material-icons">music_video</i></h3>
+						<p class="images">
+						</p>
+						<p class="text">HTML / CSS / JavaScript(ECMAscript・JQuery・Vue) / PHP(Smarty・Laravel) / Perl / Fortran</p>	
+					</div>
+				</div>
+			</div>
 			<!-- CONTACT -->
-			<div id="contact" class="contact_box"></div>
+			<div id="contact" class="contact_box">
+				<div class="title_tips">
+					<h2><i class="material-icons">web</i><span>CONTACT</span><i class="material-icons">web</i></h2>
+				</div>
+			</div>
 		</div>
 	</main>
 	<!-- footer -->

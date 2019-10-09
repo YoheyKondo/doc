@@ -5,6 +5,7 @@
 $(function(){
 	mouseMotion.init();
 })
+
 var mouseMotion = {
 	wWidth:0,
 	wHeight:0,
@@ -53,15 +54,15 @@ var mouseMotion = {
 			var rot = rota + 'deg';
 
 			if(counter%2==0){
-				rot = '-' + rot;	
-			} 
+				rot = '-' + rot;
+			}
 				
 			$(this).css('top', top);
 			$(this).css('left', left);
 			$(this).css('transform', 'rotate('+ rot + ')');
 
 			counter++;
-		
+
 		});
 	},
 	//スクロール時
@@ -77,16 +78,13 @@ var mouseMotion = {
 				posX = posX + ( -1 ) * rand * Math.sin( ( mouseMotion.wWidth / 2 - sY) * (Math.PI / mouseMotion.wWidth));
 				posY = posY + ( -1 ) * rand * Math.sin( ( mouseMotion.wHeight / 2 - sY ) * (Math.PI / mouseMotion.wHeight));
 				var rota = 0 + rand * ( mouseMotion.wWidth / 4 - mX) * ( mouseMotion.wHeight / 4 - mY ) * (Math.PI / mouseMotion.wWidth /100);
-				
+
 				var top = posY +'%';
 				var left = posX + '%';
 				var rot = rota + 'deg';
 
 				$(this).css('top', top);
 				$(this).css('left', left);
-
-
-				
 				$(this).css('transform', 'rotate('+ rot + ')');
 
 				counter++;
@@ -116,8 +114,7 @@ var mouseMotion = {
 			//位置
 			$(this).css('top', randPosTop + '%');
 			$(this).css('left', randPosLeft + '%');
-			//ransuu 
-
+			//乱数生成
 			var randNum = mouseMotion.boxRand(1,30);
 			//回転
 			var rot =  mouseMotion.boxRand(-180, 180);
@@ -136,6 +133,23 @@ var mouseMotion = {
 }
 //Menu, Scroll event 
 $(function(){
+	$('.scrollDown').on('click',function () {
+		$("html,body").animate({
+			scrollTop:$('#skill').offset().top
+		}, 500);
+		event.preventDefault();
+	});
+	// navigation scroll
+	$('nav a').on('click',function(event) {
+		var id = $(this).attr("href");
+		var offset = 0;
+		var target = $(id).offset().top - offset;
+		$('html, body').animate({
+			scrollTop: target
+		}, 500);
+		event.preventDefault();
+	});
+
 	//Menu Controll
 	$(window).on('scroll',function() {
 	  	var h = 0;
@@ -185,6 +199,8 @@ $(function(){
 		return false;
 	});
 });
+//
+
 
 //window onload
 $(window).on('load', function(){
