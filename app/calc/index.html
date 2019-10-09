@@ -75,8 +75,17 @@
 			}else{	// 演算ボタンは[＝]以外である
 				myCalc = myData;	// 演算子を退避させておく
 			}	
-		}	
-		 	
+		}
+		function myPlusMinus(myData){
+			myFlg = 0;
+			myInput = myInput * myData;
+			document.myForm.myLine.value = myInput;
+		}
+		function myPercent(myData){
+			myFlg = 0;
+			myInput = eval( myInput / myData );
+			document.myForm.myLine.value = myInput;
+		}
 		function myC(){	// クリアボタン[C]を押した
 			myTotal = 0;	// 合計クリア
 			myCalc = "+";	// 演算子クリア
@@ -98,8 +107,8 @@
 				<div class="column">
 					<div class="rows">
 						<input type="button" name="clear" id="clear" value="AC" onclick="myC()">
-						<input type="button" name="plusmin" id="plusmin" value="+/-">
-						<input type="button" name="percent" id="percent" value="%" >
+						<input type="button" name="plusmin" id="plusmin" value="+/-" onclick="myPlusMinus(-1)">
+						<input type="button" name="percent" id="percent" value="%" onclick="myPercent(100)">
 						<input type="button" name="divide" id="divide" value="÷" onclick="myCalculate('/')">	
 					</div>
 					<div class="rows">
