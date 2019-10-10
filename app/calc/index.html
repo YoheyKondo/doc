@@ -49,6 +49,7 @@
 			background-color: #777777;
 		}
 	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript"><!--
 		myTotal = 0;	// 現在の合計値
 		myInput = "";	// 現在入力している値
@@ -75,8 +76,30 @@
 			}else{	// 演算ボタンは[＝]以外である
 				myCalc = myData;	// 演算子を退避させておく
 			}	
-		}	
-		 	
+		}
+		function myPlusMinus(myData){
+			if(myInput<0){
+				//str.replace( 対象の文字, 置換する文字 );
+				myInput = myInput;
+			}else{
+				myInput = '-' + myInput;	
+			}
+			
+			document.myForm.myLine.value = myInput;
+		}
+
+		function myDot(myData){
+			myFlg = 0;
+			if(myInput.match(/\./)) return;
+			if(myInput==0) {
+				myInput = '0' + myData;
+			} else {
+				myInput += myData;
+			}
+			
+			document.myForm.myLine.value = myInput;	// 現在入力している値表示
+		}
+
 		function myC(){	// クリアボタン[C]を押した
 			myTotal = 0;	// 合計クリア
 			myCalc = "+";	// 演算子クリア
@@ -122,10 +145,9 @@
 					</div>
 					<div class="rows">
 						<input type="button" name="zero" id="zero" class="num" value="0" onclick="myValue(0)">
-						<input type="button" name="dot" id="dot" class="num" value="." onclick="myValue('.')">
+						<input type="button" name="dot" id="dot" class="num" value="." onclick="myDot('.')">
 						<input type="button" name="equal" id="equal" value="=" onclick="myCalculate('=')">
 					</div>
-
 				</div>
 			</form>
 		</div>
