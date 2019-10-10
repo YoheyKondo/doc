@@ -58,6 +58,7 @@
 		 	
 		function myValue(myData){	// 0～9または小数点ボタンを押した
 			myFlg = 0;	// １回前に入力したものは数値
+			if(myInput==0 && myData==0) return;
 			myInput += myData;	// 現在入力している値に追加
 			document.myForm.myLine.value = myInput;	// 現在入力している値表示
 		}	
