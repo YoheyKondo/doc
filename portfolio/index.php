@@ -282,24 +282,24 @@ commmonHead();
 			<!-- WORKS -->
 			<section id="works" class="works_box">
 				<div class="title_tips">
-					<h2><i class="material-icons">web</i><span>WORKS</span><i class="material-icons">web</i></h2>
+					<h2><i class="material-icons">web</i><span>MOVIES</span><i class="material-icons">web</i></h2>
+				</div>
+				<div class="content movies">
+					<div>
+						<iframe width="30%" height="auto" src="https://www.youtube-nocookie.com/embed/WBcoYUUBGRY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						
+						<iframe width="30%" height="auto" src="https://www.youtube-nocookie.com/embed/0fRZ3oNzzt0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<iframe width="30%" height="auto" src="https://www.youtube-nocookie.com/embed/xWWhQeIJkAQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+					</div>
+				</div>
+				<div class="title_tips">
+					<h2><i class="material-icons">web</i><span>WEB CONTENTS</span><i class="material-icons">web</i></h2>
 				</div>
 				<div class="content">
 					<div>
-						<h3><i class="material-icons">computer</i><span>DEV TOOLS</span><i class="material-icons">computer</i></h3>
-						<p class="images">
-							<img src="./img/logos/git.png">
-							<img src="./img/logos/github.png">
-							<img src="./img/logos/wp.png">
-						</p>
-						<p class="text">Git / GitHub / WordPress</p>
-						
-					</div>
-					<div>
-						<h3><i class="material-icons">music_video</i><span> SKILLS </span><i class="material-icons">music_video</i></h3>
-						<p class="images">
-						</p>
-						<p class="text">HTML / CSS / JavaScript(ECMAscript・JQuery・Vue) / PHP(Smarty・Laravel) / Perl / Fortran</p>	
+						<h3><i class="material-icons">music_video</i><span>HP</span><i class="material-icons">music_video</i></h3>
 					</div>
 				</div>
 			</section>

@@ -138,6 +138,10 @@ h2 span .and{
 	border-right: 1px solid #999999;
 	background-color: rgba(255,255,255,0.7);
 }
+.movies div{
+	width: 100%;
+	text-align: center;
+}
 .content div:last-child{
 	border-right: none;
 }
