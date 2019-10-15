@@ -20,7 +20,16 @@ a{
 body{
 	/* overflow-x: hidden; */
 }
+section{
+	width: 100%;
+}
+section:last-child{
+	padding-bottom: 20px;
+}
 /* MAIN VISUAL */
+.title{
+	z-index: 9999;
+}
 .title h1{
 	padding: 0;
 	margin: 0;
@@ -40,8 +49,9 @@ body{
 	    black 1px -2px, black -1px -2px,
 	    black 2px 1px,  black -2px 1px,
 	    black 2px -1px, black -2px -1px;
+    z-index: 9999;
 }
-.title div i {
+.title div.scrollDown i {
 	position: absolute;
 	bottom: 50px;
 	right: 0;
@@ -133,13 +143,37 @@ h2 span .and{
 	margin: 0 auto;
 	display: table;
 }
-.content div {
+.content > div {
 	width: 380px;
 	margin: 10px 10px;
 	padding: 10px;
 	display: table-cell;
 	border-right: 1px solid #999999;
 	background-color: rgba(255,255,255,0.7);
+}
+.content > div > div{
+	width: 30%;
+	display: table-cell;
+}
+.content.hpdesign > div{
+	padding: 0;
+	margin: 0 auto;
+	display: table;
+	width: 100%;
+}
+.content.hpdesign > div > div > a > img{
+	width: 100%;
+}
+.content.hpdesign > div > div > a {
+	text-align: center;
+	border: none;
+	border-radius: 0;
+	background-color: #ffffff;
+	width: 95%;
+	transition: background-color 0.5s ease-in-out;
+}
+.content.hpdesign > div > div > a:hover{
+	background-color: #777777;
 }
 .movies div{
 	width: 100%;
@@ -244,13 +278,14 @@ h2 span .and{
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: -999;
+	z-index: 0;
 	overflow: hidden;
 }
 .container .scene{
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+	z-index: 500;
 }
 .container .scene div {
 	width: 65%;
@@ -259,6 +294,7 @@ h2 span .and{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 1000;
 }
 .box{
 	border: solid 1px #777777;
@@ -279,15 +315,8 @@ h2 span .and{
 }
 /* SP RESPONSIVE */
 @media screen and (max-width: 1000px) {
-	html,body{
-		overflow-x: hidden;
-	}
 	.title h1{
 		font-size: 80px;
-	}
-	.container .scene div {
-    	width: 95vw;
-    	height: 65vh;
 	}
 	.wrapper > div > div.content{
 		width: 100vw;
@@ -298,20 +327,47 @@ h2 span .and{
 		display: block;
 		padding: 0px;
 	}
-	.content div{
+	.content > div{
 		width: 95%;
 		display: block;
 		position: relative;
 		margin: 0 auto;
 		border: none;
 	}
+	.content.hpdesign > div{
+		display: block;
+	}
+	.content > div > div{
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.content.hpdesign > div > div > a{
+		position: relative;
+		margin-bottom: -20px;
+		/* background-color: #777777; */
+	}
+	.content.hpdesign > div > div:last-child > a{
+		margin-bottom: 0;
+	}
+	.content.hpdesign > div > div > a > p{
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		text-shadow: 0 0 2px #000000;
+		background: #00000077;
+	}
 	.content div h3{
 		width: 100%;
 		padding: 10px 0;
 	}
+	.title_tips{
+		padding-top: 10px;
+	}
 	.title_tips > h2{
 		padding: 0;
-	}
+	}	
 	.title_tips > h2 > i{
 		padding: 0;
 		padding-bottom: 10px;
@@ -322,9 +378,6 @@ h2 span .and{
 	.movies div iframe{
 		width: 90%;
 		height: auto;
-	}
-	.box{
-		border: none;
 	}
 	.content.hpdesign div img{
 		width: 100%;
@@ -347,6 +400,9 @@ h2 span .and{
 		margin: 0 auto;
 		transform: translateX(-50%);
 		-webkit- transform: translateX(-50%);
+	}
+	input[type="submit"] + label {
+		width: 80%;	
 	}
 }
 

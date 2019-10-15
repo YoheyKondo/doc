@@ -156,8 +156,7 @@ var mouseMotion = {
 	}
 }
 
-if(mouseMotion.uaJudgement()) {
-	$(window).on('load',function(){
-		mouseMotion.heightResize();
-	});
-}
+
+$(window).on('load',function(){
+	if(mouseMotion.uaJudgement()) mouseMotion.heightResize();
+});

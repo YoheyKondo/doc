@@ -175,8 +175,8 @@ $errArr = $GLOBALS['err_message'];
 //HEAD読込
 commmonHead();
 ?>
-	<link rel="stylesheet" type="text/css" href="css/icon/material-icons.css?<?php echo time();?>">
-	<link rel="stylesheet" type="text/css" href="css/style.css?<?php echo time();?>">
+	<link rel="stylesheet" type="text/css" href="css/icon/material-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 <body>
 	<!-- BASE BACKGROUND IMAGE -->
 	<div class="bg">
@@ -300,16 +300,22 @@ commmonHead();
 				<div class="content hpdesign">
 					<div>
 						<div>
-							<img src="img/works/hp/kagent.png" alt="KAgent PC SP">
-							<p>株式会社KAgent</p>
+							<a href="https://office-kagent.com" target="_blank">
+								<img src="img/works/hp/kagent.png" alt="KAgent PC SP">
+								<p>株式会社KAgent</p>	
+							</a>
 						</div>
 						<div>
-							<img src="img/works/hp/ew.png" alt="Exciting Works PC SP">
-							<p>株式会社ExcitingWorks</p>
+							<a href="https://excitingworks.jp" target="_blank">
+								<img src="img/works/hp/ew.png" alt="Exciting Works PC SP">
+								<p>株式会社ExcitingWorks</p>
+							</a>
 						</div>
 						<div>
-							<img src="img/works/hp/wg.png" alt="World Grow PC SP">
-							<p>株式会社WorldGrow</p>
+							<a href="http://worldgrow.jp" target="_blank">
+								<img src="img/works/hp/wg.png" alt="World Grow PC SP">
+								<p>株式会社WorldGrow</p>
+							</a>
 						</div>
 					</div>
 				</div>
