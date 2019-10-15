@@ -275,7 +275,7 @@ commmonHead();
 							<img src="./img/logos/laravel.png">
 							<img src="./img/logos/perl.png">
 						</p>
-						<p class="text">HTML / CSS / JavaScript(ECMAscript・JQuery・Vue) / PHP(Smarty・Laravel) / Perl / Fortran</p>	
+						<p class="text">HTML / CSS / JavaScript(ECMA2015・JQuery・Vue) / PHP(Smarty・Laravel) / Perl / Fortran</p>	
 					</div>
 				</div>
 			</section>
@@ -286,20 +286,31 @@ commmonHead();
 				</div>
 				<div class="content movies">
 					<div>
-						<iframe width="30%" height="auto" src="https://www.youtube-nocookie.com/embed/WBcoYUUBGRY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe src="https://www.youtube-nocookie.com/embed/WBcoYUUBGRY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						
-						<iframe width="30%" height="auto" src="https://www.youtube-nocookie.com/embed/0fRZ3oNzzt0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe src="https://www.youtube-nocookie.com/embed/0fRZ3oNzzt0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-						<iframe width="30%" height="auto" src="https://www.youtube-nocookie.com/embed/xWWhQeIJkAQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe src="https://www.youtube-nocookie.com/embed/xWWhQeIJkAQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					
 					</div>
 				</div>
 				<div class="title_tips">
 					<h2><i class="material-icons">web</i><span>WEB CONTENTS</span><i class="material-icons">web</i></h2>
 				</div>
-				<div class="content">
+				<div class="content hpdesign">
 					<div>
-						<h3><i class="material-icons">music_video</i><span>HP</span><i class="material-icons">music_video</i></h3>
+						<div>
+							<img src="img/works/hp/kagent.png" alt="KAgent PC SP">
+							<p>株式会社KAgent</p>
+						</div>
+						<div>
+							<img src="img/works/hp/ew.png" alt="Exciting Works PC SP">
+							<p>株式会社ExcitingWorks</p>
+						</div>
+						<div>
+							<img src="img/works/hp/wg.png" alt="World Grow PC SP">
+							<p>株式会社WorldGrow</p>
+						</div>
 					</div>
 				</div>
 			</section>

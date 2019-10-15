@@ -78,7 +78,7 @@ ul, li{
 nav ul{
 	background-color: #ffffff;
 	display: table;
-	width: 100%;
+	width: 100vw;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -103,6 +103,9 @@ nav ul li a:hover {
 }
 
 /* CONTENT */
+main{
+	width: 100%;
+}
 h2{
 	line-height: 20px;
 	height: 25px;
@@ -142,6 +145,10 @@ h2 span .and{
 	width: 100%;
 	text-align: center;
 }
+.movies div iframe{
+	width: 30%;
+	height: auto;
+}
 .content div:last-child{
 	border-right: none;
 }
@@ -163,6 +170,18 @@ h2 span .and{
 }
 .content div .text{
 	text-align: center;
+}
+.content.hpdesign div a{
+	width: auto;
+	height: auto;
+}
+.content.hpdesign div a img{
+	width: 300px;
+	height: auto;
+}
+.content.hpdesign div a p{
+	color: #ffffff;
+	text-shadow: 0 0 2px #000000;
 }
 .images{
 	width: 400px;
@@ -203,8 +222,10 @@ h2 span .and{
 	overflow: hidden;
 }
 .bg img{
-	width: 100%;
-	 filter: blur(5px);
+	width: 100vw;
+	max-width: 100vw;
+	filter: blur(5px);
+	overflow: hidden;
 }
 /* BACKGROUND PARALLAX CSS*/
 .container{
@@ -256,22 +277,57 @@ h2 span .and{
 		font-size: 80px;
 	}
 	.container .scene div {
-    	width: 95%;
-    	height: 65%;
+    	width: 95vw;
+    	height: 65vh;
 	}
 	.wrapper > div > div.content{
-		width: 100%;
+		width: 100vw;
 		display: block
 	}
-	.content > div{
+	.content{
 		width: 100%;
 		display: block;
+	}
+	.content div{
+		width: 100%;
+		display: block;
+		position: relative;
 	}
 	.content div h3{
 		width: 100%;
 	}
 	.images{
 		width: 100%;
+	}
+	.movies div iframe{
+		width: 90%;
+		height: auto;
+	}
+	.content div{
+		width: 95vw;
+		margin: 0 auto;
+		border: none;
+	}
+	.box{
+		border: none;
+	}
+	.content.hpdesign div img{
+		width: 90%;
+		height: auto;
+		position: relative;
+	}
+	.content.hpdesign div a{
+		width: 80%;
+		position: relative;
+	}
+	.content.hpdesign > div > div > p{
+		font-size: 25px;
+		position: absolute;
+		bottom: 70px;
+		left: 0;
+		right: 0;
+		text-shadow: 0 0 10px #000000;
+		color: #ffffff;
 	}
 }
 

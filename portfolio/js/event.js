@@ -66,18 +66,11 @@ $(function(){
 
 
 //window onload
+/*
 $(window).on('load', function(){
 	//高さ揃え
 	resizeHeight();	
 })
+*/
 
-function resizeHeight(){
-	var maxHeight = 0;
-	$('.content div p.images').each(function(i, box) {
-		if($(box).height() > maxHeight) maxHeight = $(box).height();
-	});
-	$('.content div').each(function(i, e){
-		$(e).find('.images').height(maxHeight);
-	})
-}
 

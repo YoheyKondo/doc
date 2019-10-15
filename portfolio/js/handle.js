@@ -31,11 +31,26 @@ var mouseMotion = {
 			var mX = e.pageX;  //X座標
 			var mY = e.pageY;  //Y座標
 			var counter = 0;
-			setTimeout( function(){ mouseMotion.mousePos(mX, mY, counter)}, 200);
-			//mouseMotion.mousePos(mX, mY, counter);
+			//setTimeout( function(){ mouseMotion.mousePos(mX, mY, counter)}, 200);
+			mouseMotion.mousePos(mX, mY, counter);
 		});
 		//スクロールイベント
 		//mouseMotion.scrollPos();
+	},
+	uaJudgement:function(){
+	 	var ua = navigator.userAgent;
+	 	var device = false;
+		if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+			// スマートフォン用コード
+			device = false;
+		} else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+			// タブレット用コード
+			device = false;
+		} else {
+			// PC用コード
+			device = true;
+		}
+		return device;
 	},
 	//マウスの位置に応じて子要素のdiv位置を変動させる
 	mousePos:function(mX, mY, counter){
@@ -130,4 +145,19 @@ var mouseMotion = {
 		});
 		mouseMotion.boxCount = counter;
 	}
+	,heightResize:function(){
+		var maxHeight = 0;
+		$('.content div p.images').each(function(i, box) {
+			if($(box).height() > maxHeight) maxHeight = $(box).height();
+		});
+		$('.content div').each(function(i, e){
+			$(e).find('.images').height(maxHeight);
+		})
+	}
+}
+
+if(mouseMotion.uaJudgement()) {
+	$(window).on('load',function(){
+		mouseMotion.heightResize();
+	});
 }
