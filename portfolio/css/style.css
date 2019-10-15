@@ -291,6 +291,7 @@ h2 span .and{
 	.content{
 		width: 100%;
 		display: block;
+		padding: 0px;
 	}
 	.content div{
 		width: 100%;
@@ -299,6 +300,7 @@ h2 span .and{
 	}
 	.content div h3{
 		width: 100%;
+		padding: 10px 0;
 	}
 	.images{
 		width: 100%;
