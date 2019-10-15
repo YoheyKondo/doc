@@ -28,16 +28,14 @@ $(function(){
 	var sections = $('section'), nav = $('nav'), nav_height = nav.outerHeight();
 	$(window).on('scroll', function () {
 		var cur_pos = $(this).scrollTop();
+		mouseMotion.topOffset = cur_pos;
 		sections.each(function() {
 			var top = $(this).offset().top - nav_height, bottom = top + $(this).outerHeight();
-			//console.log(top);
-
 			
 			if (cur_pos >= top - 175 && cur_pos <= bottom + 100) {
 				nav.find('a').removeClass('active');
 				sections.removeClass('active');
 				var this_id = $(this).attr('id');
-				console.log(this_id);
 
 				switch (this_id){
 					case "work":

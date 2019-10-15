@@ -15,6 +15,7 @@ var mouseMotion = {
 	boxSize:[],
 	boxCount:0,
 	widthProp:[],
+	topOffset:0,
 	init:function(){
 		mouseMotion.windowSize();
 		mouseMotion.addEvent();
@@ -32,7 +33,8 @@ var mouseMotion = {
 			var mY = e.pageY;  //Y座標
 			var counter = 0;
 			//setTimeout( function(){ mouseMotion.mousePos(mX, mY, counter)}, 200);
-			mouseMotion.mousePos(mX, mY, counter);
+			if(mouseMotion.topOffset==0) mouseMotion.mousePos(mX, mY, counter);
+			
 		});
 		//スクロールイベント
 		//mouseMotion.scrollPos();
@@ -68,22 +70,20 @@ var mouseMotion = {
 			var left = posX + '%';
 			var rot = rota + 'deg';
 
-			if(counter%2==0){
-				rot = '-' + rot;
-			}
+			if(counter%2==0) rot = '-' + rot;
 				
 			$(this).css('top', top);
 			$(this).css('left', left);
 			$(this).css('transform', 'rotate('+ rot + ')');
 
 			counter++;
-
 		});
 	},
 	//スクロール時
 	scrollPos:function(){
 		$(window).on('scroll', function(){
 			var sY = $(this).scrollTop();
+
 			var counter = 0;
 			$('.scene div').each(function(){
 				var posX = mouseMotion.boxPos[counter].randPosLeft;

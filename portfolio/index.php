@@ -195,6 +195,11 @@ commmonHead();
 			<div class="box"></div>
 			<div class="box"></div>
 			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
 		</div>
 	</div>
 	<!-- Main Title -->

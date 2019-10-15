@@ -273,7 +273,7 @@ h2 span .and{
 	height: 100vh;
 	min-height: 100vh;
 	min-width: 100vw;
-	background-color: #000000aa;
+	background-color: #00000044;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -284,6 +284,10 @@ h2 span .and{
 .container .scene{
 	width: 100vw;
 	height: 100vh;
+	max-height: 100vh;
+	max-width: 100vw;
+	min-height: 100vh;
+	min-width: 100vw;
 	overflow: hidden;
 	z-index: 500;
 }
@@ -317,6 +321,9 @@ h2 span .and{
 @media screen and (max-width: 1000px) {
 	.title h1{
 		font-size: 80px;
+	}
+	.container{
+		background-color: #00000011;
 	}
 	.wrapper > div > div.content{
 		width: 100vw;
@@ -357,6 +364,7 @@ h2 span .and{
 		right: 0;
 		text-shadow: 0 0 2px #000000;
 		background: #00000077;
+		font-size: 30px;
 	}
 	.content div h3{
 		width: 100%;
