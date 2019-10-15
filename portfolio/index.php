@@ -221,7 +221,7 @@ commmonHead();
 			<!-- DESIGN -->
 			<section id="skill" >
 				<div class="title_tips">
-					<h2><i class="material-icons">edit</i><span>CREATIVE TOOLS<i class="material-icons">edit</i></h2>
+					<h2><i class="material-icons">edit</i><span>CREATIVE TOOLS</span><i class="material-icons">edit</i></h2>
 				</div>
 				<div class="content">
 					<div>

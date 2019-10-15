@@ -170,6 +170,7 @@ h2 span .and{
 }
 .content div .text{
 	text-align: center;
+	overflow-wrap: break-word;
 }
 .content.hpdesign div a{
 	width: auto;
@@ -277,6 +278,9 @@ h2 span .and{
 }
 /* SP RESPONSIVE */
 @media screen and (max-width: 1000px) {
+	html,body{
+		overflow-x: hidden;
+	}
 	.title h1{
 		font-size: 80px;
 	}
@@ -297,6 +301,13 @@ h2 span .and{
 		width: 100%;
 		display: block;
 		position: relative;
+	}
+	.title_tips > h2{
+		padding: 0;
+	}
+	.title_tips > h2 > i{
+		padding: 0;
+		padding-bottom: 10px;
 	}
 	.content div h3{
 		width: 100%;
