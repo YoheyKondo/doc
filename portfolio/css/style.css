@@ -18,7 +18,7 @@ a{
 	display: block;
 }
 body{
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 /* MAIN VISUAL */
 .title h1{
@@ -220,7 +220,7 @@ h2 span .and{
 	right: 0;
 	left: 0;
 	z-index: -9999;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 .bg img{
 	width: 100vw;
@@ -230,7 +230,8 @@ h2 span .and{
 	max-height: 100vh;
 	min-height: 100vh;
 	filter: blur(5px);
-	overflow: hidden;
+	padding: 0;
+	margin: 0;
 }
 /* BACKGROUND PARALLAX CSS*/
 .container{
@@ -298,9 +299,15 @@ h2 span .and{
 		padding: 0px;
 	}
 	.content div{
-		width: 100%;
+		width: 95%;
 		display: block;
 		position: relative;
+		margin: 0 auto;
+		border: none;
+	}
+	.content div h3{
+		width: 100%;
+		padding: 10px 0;
 	}
 	.title_tips > h2{
 		padding: 0;
@@ -309,10 +316,6 @@ h2 span .and{
 		padding: 0;
 		padding-bottom: 10px;
 	}
-	.content div h3{
-		width: 100%;
-		padding: 10px 0;
-	}
 	.images{
 		width: 100%;
 	}
@@ -320,16 +323,11 @@ h2 span .and{
 		width: 90%;
 		height: auto;
 	}
-	.content div{
-		width: 95vw;
-		margin: 0 auto;
-		border: none;
-	}
 	.box{
 		border: none;
 	}
 	.content.hpdesign div img{
-		width: 90%;
+		width: 100%;
 		height: auto;
 		position: relative;
 	}
@@ -341,10 +339,14 @@ h2 span .and{
 		font-size: 25px;
 		position: absolute;
 		bottom: 70px;
-		left: 0;
-		right: 0;
+		left: 50%;
 		text-shadow: 0 0 10px #000000;
 		color: #ffffff;
+		width: 80%;
+		text-align: center;
+		margin: 0 auto;
+		transform: translateX(-50%);
+		-webkit- transform: translateX(-50%);
 	}
 }
 

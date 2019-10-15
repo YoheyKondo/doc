@@ -175,7 +175,7 @@ p{
 /* FOR Smart Phone Sizes (Under width 800px) */
 @media only screen and (max-width: 799px) {
 	.form{
-		width: 100%;
+		width: 80%;
 	}
 	form{
 		width: 100%;

@@ -175,8 +175,8 @@ $errArr = $GLOBALS['err_message'];
 //HEAD読込
 commmonHead();
 ?>
-	<link rel="stylesheet" type="text/css" href="css/icon/material-icons.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/icon/material-icons.css?<?php echo time();?>">
+	<link rel="stylesheet" type="text/css" href="css/style.css?<?php echo time();?>">
 <body>
 	<!-- BASE BACKGROUND IMAGE -->
 	<div class="bg">
