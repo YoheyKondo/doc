@@ -51,6 +51,9 @@ section:last-child{
 	    black 2px -1px, black -2px -1px;
     z-index: 9999;
 }
+.title_tips{
+	box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+}
 .title div.scrollDown i {
 	position: absolute;
 	bottom: 50px;
@@ -182,6 +185,11 @@ h2 span .and{
 .movies div iframe{
 	width: 30%;
 	height: auto;
+	box-shadow: 0px 5px 5px 5px #000000;
+    margin-right: 15px;
+}
+.movies div iframe:last-child{
+	margin-right: 0;
 }
 .content div:last-child{
 	border-right: none;
@@ -371,7 +379,9 @@ h2 span .and{
 		padding: 10px 0;
 	}
 	.title_tips{
-		padding-top: 10px;
+		padding: 15px 0px;
+		box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+		margin-bottom: 10px;
 	}
 	.title_tips > h2{
 		padding: 0;
@@ -386,6 +396,15 @@ h2 span .and{
 	.movies div iframe{
 		width: 90%;
 		height: auto;
+		margin-right: 0px;
+		margin-bottom: 15px;
+	}
+	.movies div iframe:first-child{
+		margin-top: 15px;
+	}
+	.movies div iframe:last-child{
+		margin-right: 0px;
+		margin-bottom: 0px;
 	}
 	.content.hpdesign div img{
 		width: 100%;

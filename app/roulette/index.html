@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ルーレットsample</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- JSON データ読込 -->
+	<script type="text/javascript">
+		$(function(){
+			roulette.init();
+/*
+			$.ajax({ // json読み込み開始
+				type: 'GET',
+				url: 'data.json',
+				dataType: 'text'
+			})
+			.then(
+				function(json) {// jsonの読み込みに成功した時
+					console.log('成功')
+					console.log(json);
+				},
+				function() { //jsonの読み込みに失敗した時
+					console.log('失敗');
+				}
+			);
+			*/
+		});
+		var roulette = {
+			data:'',
+
+			init:function(){
+				roulette.jsonAjax();
+			},
+			jsonAjax:function(){
+				$.ajax({ // json読み込み開始
+					type: 'GET',
+					url: 'data.json',
+					dataType: 'text'
+				})
+				.then(
+					function(json) { // jsonの読み込みに成功した時
+						roulette.data = json;
+						
+						console.log(roulette.showDisp());
+					},
+					function() {
+						alert('データの抽出に失敗しました！通信環境をご確認の上、再度読み込みを行ってください。');
+						return;
+					}
+				);
+			},
+			showDisp:function(){
+				roulette.data = JSON.parse(roulette.data).data;
+				var rand = roulette.randNum();
+				var json = roulette.data;
+				return json[rand];
+
+			},
+			randNum:function(){
+				var json = roulette.data;
+				var length = Object.keys(json).length;
+				var random = Math.floor( Math.random() * length);
+				return random;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>ルーレット</h1>
+	<div id="disp">ルーレット</div>
+	<div class="row">
+		<a href="#start">開始</a>
+		<a href="#stop">停止</a>
+	</div>
+</body>
+</html>
