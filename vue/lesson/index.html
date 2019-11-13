@@ -67,9 +67,8 @@
 	<br><hr><br>
 	<h2>新しい作業の追加</h2>
 	<form class="add-form" v-on:submit.prevent="addTask">
-		<label>
-			<input type="date" name="date" ref="date" placeholder="期日">
-		</label>
+		
+		<input type="date" name="date" ref="date" placeholder="期日">
 		<input type="text" ref="comment" placeholder="タスクの追加">
 		<!-- 追加ボタンのモック -->
 		<button type="submit">追加</button>
